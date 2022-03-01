@@ -84,12 +84,12 @@ public class SubjectService {
 		return String.valueOf(subjectDbRepository.saveAndFlush(updateinfo).getSId());
 
 	}
-	
+
 	public SubjectDb getDetail(GetDetail model) {
 		SubjectDb data = subjectDbRepository.findById(model.sId).get();
 		return data;
 	}
-	
+
 	public void cancel(GetDetail model) {
 
 		subjectDbRepository.deleteById(model.sId);
