@@ -1,16 +1,9 @@
 package com.bk.GradeManager.controller.web;
 
 import com.bk.GradeManager.entity.web.GradeDb;
-import com.bk.GradeManager.entity.web.StudentDb;
-import com.bk.GradeManager.entity.web.SubjectDb;
-import com.bk.GradeManager.model.GradeListModel;
-import com.bk.GradeManager.model.GradeSaveModel;
+import com.bk.GradeManager.model.*;
 import com.bk.GradeManager.model.GradeDetailModel.GetDetail;
-import com.bk.GradeManager.model.SubjectSaveModel;
-import com.bk.GradeManager.model.SubjectSearchModel;
-import com.bk.GradeManager.model.core.UserSearchModel;
 import com.bk.GradeManager.service.web.GradeService;
-import com.bk.GradeManager.service.web.SubjectService;
 import com.bk.GradeManager.utils.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -52,6 +45,8 @@ public class GradeController {
 	public GradeDb getDetail(@RequestBody GetDetail model) throws Exception {
 		return gradeService.getDetail(model);
 	}
+
+
 //
 	@PostMapping("/cancel")
 	public void cancel(@RequestBody GetDetail model) throws Exception {

@@ -58,6 +58,60 @@ public class GradeDetailModel {
 	@JsonProperty("point6")
 	public Integer point6;
 
+	@JsonProperty("sId1")
+	public Integer sId1;
+
+	@JsonProperty("subjectCredit1")
+	public Integer subjectCredit1;
+
+	@JsonProperty("subjectId1")
+	public String subjectId1;
+
+	@JsonProperty("sId2")
+	public Integer sId2;
+
+	@JsonProperty("subjectCredit2")
+	public Integer subjectCredit2;
+
+	@JsonProperty("subjectId2")
+	public String subjectId2;
+
+	@JsonProperty("sId3")
+	public Integer sId3;
+
+	@JsonProperty("subjectCredit3")
+	public Integer subjectCredit3;
+
+	@JsonProperty("subjectId3")
+	public String subjectId3;
+
+	@JsonProperty("sId4")
+	public Integer sId4;
+
+	@JsonProperty("subjectCredit4")
+	public Integer subjectCredit4;
+
+	@JsonProperty("subjectId4")
+	public String subjectId4;
+
+	@JsonProperty("sId5")
+	public Integer sId5;
+
+	@JsonProperty("subjectCredit5")
+	public Integer subjectCredit5;
+
+	@JsonProperty("subjectId5")
+	public String subjectId5;
+
+	@JsonProperty("sId6")
+	public Integer sId6;
+
+	@JsonProperty("subjectCredit6")
+	public Integer subjectCredit6;
+
+	@JsonProperty("subjectId6")
+	public String subjectId6;
+
 
 
 	@Data
@@ -66,5 +120,6 @@ public class GradeDetailModel {
 		public Integer gId;
 
 	}
+
 
 }

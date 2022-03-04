@@ -2,11 +2,9 @@ package com.bk.GradeManager.service.web;
 
 
 import com.bk.GradeManager.entity.web.GradeDb;
-import com.bk.GradeManager.entity.web.StudentDb;
 import com.bk.GradeManager.model.GradeDetailModel;
 import com.bk.GradeManager.model.GradeListModel;
 import com.bk.GradeManager.model.GradeSaveModel;
-import com.bk.GradeManager.model.core.UserSearchModel;
 import com.bk.GradeManager.repository.core.CoreRepository;
 import com.bk.GradeManager.repository.core.GridData;
 import com.bk.GradeManager.repository.core.Sort;
@@ -91,7 +89,25 @@ public class GradeService {
 		sql.append("  	point3 AS \"point3\", ");
 		sql.append("  	point4 AS \"point4\", ");
 		sql.append("  	point5 AS \"point5\", ");
-		sql.append("  	point6 AS \"point6\" ");
+		sql.append("  	point6 AS \"point6\", ");
+		sql.append("  	s_id1 AS \"sId1\", ");
+		sql.append("  	subject_credit1 AS \"subjectCredit1\", ");
+		sql.append("  	subject_id1 AS \"subjectId1\", ");
+		sql.append("  	s_id2 AS \"sId2\", ");
+		sql.append("  	subject_credit2 AS \"subjectCredit2\", ");
+		sql.append("  	subject_id2 AS \"subjectId2\", ");
+		sql.append("  	s_id3 AS \"sId3\", ");
+		sql.append("  	subject_credit3 AS \"subjectCredit3\", ");
+		sql.append("  	subject_id3 AS \"subjectId3\", ");
+		sql.append("  	s_id4 AS \"sId4\", ");
+		sql.append("  	subject_credit4 AS \"subjectCredit4\", ");
+		sql.append("  	subject_id4 AS \"subjectId4\", ");
+		sql.append("  	s_id5 AS \"sId5\", ");
+		sql.append("  	subject_credit5 AS \"subjectCredit5\", ");
+		sql.append("  	subject_id5 AS \"subjectId5\", ");
+		sql.append("  	s_id6 AS \"sId6\", ");
+		sql.append("  	subject_credit6 AS \"subjectCredit6\", ");
+		sql.append("  	subject_id6 AS \"subjectId6\" ");
 		sql.append("  	FROM grade_db ");
 		sql.append(" WHERE 1=1 ");
 
@@ -130,7 +146,24 @@ public class GradeService {
 		gradeDb.setPoint4(model.getPoint4());
 		gradeDb.setPoint5(model.getPoint5());
 		gradeDb.setPoint6(model.getPoint6());
-
+		gradeDb.setSId1(model.getSId1());
+		gradeDb.setSubjectCredit1(model.getSubjectCredit1());
+		gradeDb.setSubjectId1(model.getSubjectId1());
+		gradeDb.setSId2(model.getSId2());
+		gradeDb.setSubjectCredit2(model.getSubjectCredit2());
+		gradeDb.setSubjectId2(model.getSubjectId2());
+		gradeDb.setSId3(model.getSId3());
+		gradeDb.setSubjectCredit3(model.getSubjectCredit3());
+		gradeDb.setSubjectId3(model.getSubjectId3());
+		gradeDb.setSId4(model.getSId4());
+		gradeDb.setSubjectCredit4(model.getSubjectCredit4());
+		gradeDb.setSubjectId4(model.getSubjectId4());
+		gradeDb.setSId5(model.getSId5());
+		gradeDb.setSubjectCredit5(model.getSubjectCredit5());
+		gradeDb.setSubjectId5(model.getSubjectId5());
+		gradeDb.setSId6(model.getSId6());
+		gradeDb.setSubjectCredit6(model.getSubjectCredit6());
+		gradeDb.setSubjectId6(model.getSubjectId6());
 		String infoSave = String.valueOf(gradeDbRepository.saveAndFlush(gradeDb).getId());
 		return infoSave;
 
@@ -152,6 +185,7 @@ public class GradeService {
 		GradeDb data = gradeDbRepository.findById(model.gId).get();
 		return data;
 	}
+
 //
 	public void cancel(GradeDetailModel.GetDetail model) {
 
